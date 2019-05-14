@@ -1,0 +1,14 @@
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\bin\Debug\netcoreapp2.2\WebApiTestApplication.deps.json
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\bin\Debug\netcoreapp2.2\WebApiTestApplication.runtimeconfig.json
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\bin\Debug\netcoreapp2.2\WebApiTestApplication.runtimeconfig.dev.json
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\bin\Debug\netcoreapp2.2\WebApiTestApplication.dll
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\bin\Debug\netcoreapp2.2\WebApiTestApplication.pdb
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.csprojAssemblyReference.cache
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.RazorAssemblyInfo.cache
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.RazorAssemblyInfo.cs
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.AssemblyInfoInputs.cache
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.AssemblyInfo.cs
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.RazorTargetAssemblyInfo.cache
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.dll
+C:\Users\Vincent\source\repos\WebApiTestApplication\WebApiTestApplication\obj\Debug\netcoreapp2.2\WebApiTestApplication.pdb
