@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vincent\\Desktop\\WebApiTestApplication\\WebApplication\\WebApplication.csproj": {}
+    "F:\\PRJ666\\BestPrice\\WebApiTestApplication\\WebApplication\\WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vincent\\Desktop\\WebApiTestApplication\\WebApplication\\WebApplication.csproj": {
+    "F:\\PRJ666\\BestPrice\\WebApiTestApplication\\WebApplication\\WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vincent\\Desktop\\WebApiTestApplication\\WebApplication\\WebApplication.csproj",
+        "projectUniqueName": "F:\\PRJ666\\BestPrice\\WebApiTestApplication\\WebApplication\\WebApplication.csproj",
         "projectName": "WebApplication",
-        "projectPath": "C:\\Users\\Vincent\\Desktop\\WebApiTestApplication\\WebApplication\\WebApplication.csproj",
+        "projectPath": "F:\\PRJ666\\BestPrice\\WebApiTestApplication\\WebApplication\\WebApplication.csproj",
         "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vincent\\Desktop\\WebApiTestApplication\\WebApplication\\obj\\",
+        "outputPath": "F:\\PRJ666\\BestPrice\\WebApiTestApplication\\WebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -162,13 +162,6 @@ F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Home
 F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Home\ContactUs.g.cshtml.cs
 F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Home\HelpCentre.g.cshtml.cs
 F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Home\ReportIssue.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Register\Create.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Register\Delete.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Register\Details.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Register\Edit.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Register\Index.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Login\Create.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Login\Delete.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Login\Details.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Login\Edit.g.cshtml.cs
-F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.g.cshtml.cs
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
