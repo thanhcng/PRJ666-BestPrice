@@ -33,7 +33,7 @@ namespace BestPrice.Controllers
             }
 
             var sellers = await _context.Sellers
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (sellers == null)
             {
                 return NotFound();
@@ -72,7 +72,7 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var sellers = await _context.Sellers.FindAsync(id);
+            var sellers = await _context.Sellers.SingleOrDefaultAsync(m => m.Id == id);
             if (sellers == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace BestPrice.Controllers
             }
 
             var sellers = await _context.Sellers
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (sellers == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var sellers = await _context.Sellers.FindAsync(id);
+            var sellers = await _context.Sellers.SingleOrDefaultAsync(m => m.Id == id);
             _context.Sellers.Remove(sellers);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

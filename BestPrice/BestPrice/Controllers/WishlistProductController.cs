@@ -36,7 +36,7 @@ namespace BestPrice.Controllers
             var wishlistProduct = await _context.WishlistProduct
                 .Include(w => w.Product)
                 .Include(w => w.Wishlist)
-                .FirstOrDefaultAsync(m => m.WishlistId == id);
+                .SingleOrDefaultAsync(m => m.WishlistId == id);
             if (wishlistProduct == null)
             {
                 return NotFound();
@@ -79,7 +79,7 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var wishlistProduct = await _context.WishlistProduct.FindAsync(id);
+            var wishlistProduct = await _context.WishlistProduct.SingleOrDefaultAsync(m => m.WishlistId == id);
             if (wishlistProduct == null)
             {
                 return NotFound();
@@ -137,7 +137,7 @@ namespace BestPrice.Controllers
             var wishlistProduct = await _context.WishlistProduct
                 .Include(w => w.Product)
                 .Include(w => w.Wishlist)
-                .FirstOrDefaultAsync(m => m.WishlistId == id);
+                .SingleOrDefaultAsync(m => m.WishlistId == id);
             if (wishlistProduct == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var wishlistProduct = await _context.WishlistProduct.FindAsync(id);
+            var wishlistProduct = await _context.WishlistProduct.SingleOrDefaultAsync(m => m.WishlistId == id);
             _context.WishlistProduct.Remove(wishlistProduct);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

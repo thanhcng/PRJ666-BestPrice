@@ -31,7 +31,7 @@ namespace BestPrice.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("server=mymysql.senecacollege.ca;uid=prj666_192a03;pwd=fnML@8473;database=prj666_192a03");
+                optionsBuilder.UseMySQL("Server=mymysql.senecacollege.ca;Uid=prj666_192a03;Pwd=fnML@8473;Database=prj666_192a03;");
             }
         }
 

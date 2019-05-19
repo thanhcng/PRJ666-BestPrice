@@ -35,7 +35,7 @@ namespace BestPrice.Controllers
 
             var wishlists = await _context.Wishlists
                 .Include(w => w.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (wishlists == null)
             {
                 return NotFound();
@@ -47,7 +47,7 @@ namespace BestPrice.Controllers
         // GET: Wishlists/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace BestPrice.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", wishlists.UserId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", wishlists.UserId);
             return View(wishlists);
         }
 
@@ -76,12 +76,12 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var wishlists = await _context.Wishlists.FindAsync(id);
+            var wishlists = await _context.Wishlists.SingleOrDefaultAsync(m => m.Id == id);
             if (wishlists == null)
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", wishlists.UserId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", wishlists.UserId);
             return View(wishlists);
         }
 
@@ -117,7 +117,7 @@ namespace BestPrice.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", wishlists.UserId);
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", wishlists.UserId);
             return View(wishlists);
         }
 
@@ -131,7 +131,7 @@ namespace BestPrice.Controllers
 
             var wishlists = await _context.Wishlists
                 .Include(w => w.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (wishlists == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var wishlists = await _context.Wishlists.FindAsync(id);
+            var wishlists = await _context.Wishlists.SingleOrDefaultAsync(m => m.Id == id);
             _context.Wishlists.Remove(wishlists);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

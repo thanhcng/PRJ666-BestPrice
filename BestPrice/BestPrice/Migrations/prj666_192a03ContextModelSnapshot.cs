@@ -131,9 +131,8 @@ namespace BestPrice.Migrations
 
                     b.Property<string>("Subject")
                         .IsRequired()
-                        .HasColumnName("Subject")
-                        .HasColumnType("varchar")
-                        .HasMaxLength(80);
+                        .HasMaxLength(80)
+                        .IsUnicode(false);
 
                     b.HasKey("Id");
 
@@ -200,7 +199,7 @@ namespace BestPrice.Migrations
                         .HasMaxLength(75)
                         .IsUnicode(false);
 
-                    b.Property<int>("LocationId")
+                    b.Property<int?>("LocationId")
                         .HasColumnType("int(10)");
 
                     b.Property<string>("Password")
@@ -222,13 +221,13 @@ namespace BestPrice.Migrations
 
             modelBuilder.Entity("BestPrice.Models.WishlistProduct", b =>
                 {
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int(10)");
-
                     b.Property<int>("WishlistId")
                         .HasColumnType("int(10)");
 
-                    b.HasKey("ProductId", "WishlistId");
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int(10)");
+
+                    b.HasKey("WishlistId", "ProductId");
 
                     b.HasIndex("WishlistId")
                         .HasName("WishlistProduct_WishlistId_FK");

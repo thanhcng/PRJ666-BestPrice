@@ -35,7 +35,7 @@ namespace BestPrice.Controllers
 
             var reviews = await _context.Reviews
                 .Include(r => r.Product)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (reviews == null)
             {
                 return NotFound();
@@ -76,7 +76,7 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var reviews = await _context.Reviews.FindAsync(id);
+            var reviews = await _context.Reviews.SingleOrDefaultAsync(m => m.Id == id);
             if (reviews == null)
             {
                 return NotFound();
@@ -131,7 +131,7 @@ namespace BestPrice.Controllers
 
             var reviews = await _context.Reviews
                 .Include(r => r.Product)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (reviews == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var reviews = await _context.Reviews.FindAsync(id);
+            var reviews = await _context.Reviews.SingleOrDefaultAsync(m => m.Id == id);
             _context.Reviews.Remove(reviews);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

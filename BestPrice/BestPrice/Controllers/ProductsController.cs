@@ -35,7 +35,7 @@ namespace BestPrice.Controllers
 
             var products = await _context.Products
                 .Include(p => p.Seller)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (products == null)
             {
                 return NotFound();
@@ -47,7 +47,7 @@ namespace BestPrice.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Name");
+            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Link");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace BestPrice.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Name", products.SellerId);
+            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Link", products.SellerId);
             return View(products);
         }
 
@@ -76,12 +76,12 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var products = await _context.Products.FindAsync(id);
+            var products = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
             if (products == null)
             {
                 return NotFound();
             }
-            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Name", products.SellerId);
+            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Link", products.SellerId);
             return View(products);
         }
 
@@ -117,7 +117,7 @@ namespace BestPrice.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Name", products.SellerId);
+            ViewData["SellerId"] = new SelectList(_context.Sellers, "Id", "Link", products.SellerId);
             return View(products);
         }
 
@@ -131,7 +131,7 @@ namespace BestPrice.Controllers
 
             var products = await _context.Products
                 .Include(p => p.Seller)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (products == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var products = await _context.Products.FindAsync(id);
+            var products = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
             _context.Products.Remove(products);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

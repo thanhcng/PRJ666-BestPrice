@@ -33,7 +33,7 @@ namespace BestPrice.Controllers
             }
 
             var locations = await _context.Locations
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (locations == null)
             {
                 return NotFound();
@@ -72,7 +72,7 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var locations = await _context.Locations.FindAsync(id);
+            var locations = await _context.Locations.SingleOrDefaultAsync(m => m.Id == id);
             if (locations == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace BestPrice.Controllers
             }
 
             var locations = await _context.Locations
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (locations == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var locations = await _context.Locations.FindAsync(id);
+            var locations = await _context.Locations.SingleOrDefaultAsync(m => m.Id == id);
             _context.Locations.Remove(locations);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

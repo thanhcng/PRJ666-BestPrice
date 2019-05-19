@@ -36,7 +36,7 @@ namespace BestPrice.Controllers
             var notifications = await _context.Notifications
                 .Include(n => n.Product)
                 .Include(n => n.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (notifications == null)
             {
                 return NotFound();
@@ -79,7 +79,7 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var notifications = await _context.Notifications.FindAsync(id);
+            var notifications = await _context.Notifications.SingleOrDefaultAsync(m => m.Id == id);
             if (notifications == null)
             {
                 return NotFound();
@@ -137,7 +137,7 @@ namespace BestPrice.Controllers
             var notifications = await _context.Notifications
                 .Include(n => n.Product)
                 .Include(n => n.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (notifications == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var notifications = await _context.Notifications.FindAsync(id);
+            var notifications = await _context.Notifications.SingleOrDefaultAsync(m => m.Id == id);
             _context.Notifications.Remove(notifications);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

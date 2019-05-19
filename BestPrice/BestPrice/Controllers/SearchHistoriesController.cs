@@ -35,7 +35,7 @@ namespace BestPrice.Controllers
 
             var searchHistories = await _context.SearchHistories
                 .Include(s => s.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (searchHistories == null)
             {
                 return NotFound();
@@ -76,7 +76,7 @@ namespace BestPrice.Controllers
                 return NotFound();
             }
 
-            var searchHistories = await _context.SearchHistories.FindAsync(id);
+            var searchHistories = await _context.SearchHistories.SingleOrDefaultAsync(m => m.Id == id);
             if (searchHistories == null)
             {
                 return NotFound();
@@ -131,7 +131,7 @@ namespace BestPrice.Controllers
 
             var searchHistories = await _context.SearchHistories
                 .Include(s => s.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (searchHistories == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace BestPrice.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var searchHistories = await _context.SearchHistories.FindAsync(id);
+            var searchHistories = await _context.SearchHistories.SingleOrDefaultAsync(m => m.Id == id);
             _context.SearchHistories.Remove(searchHistories);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

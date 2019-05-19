@@ -1,0 +1,12 @@
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\bin\Debug\netcoreapp2.0\BestPrice.deps.json
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\bin\Debug\netcoreapp2.0\BestPrice.runtimeconfig.json
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\bin\Debug\netcoreapp2.0\BestPrice.runtimeconfig.dev.json
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\bin\Debug\netcoreapp2.0\BestPrice.dll
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\BestPrice.csprojAssemblyReference.cache
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\BestPrice.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\BestPrice.AssemblyInfoInputs.cache
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\BestPrice.AssemblyInfo.cs
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\bin\Debug\netcoreapp2.0\BestPrice.pdb
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\BestPrice.dll
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\BestPrice.pdb
+C:\Users\Vincent\Desktop\BestPrice\BestPrice\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
