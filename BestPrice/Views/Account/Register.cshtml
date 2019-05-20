@@ -1,0 +1,44 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Create your account";
+}
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="border: 1px solid #e5e5e5; margin-top: 50px; padding-left:20px; padding-right: 20px; padding-bottom: 15px;">
+            <h2>@ViewData["Title"]</h2>
+            <section>
+                <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                    <h5>If you already have an account, please <a asp-action="login" asp-route-returnurl="@ViewData["ReturnUrl"]">log in</a>. </h5>
+                    <hr />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Email Address" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" class="form-control" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" placeholder="Retype Password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <h5 style="padding-left:2.5px; opacity: 0.8;"><strong>By creating an account, you are allowing us to send notifications on your provided email.</strong></h5>
+                    <button type="submit" class="btn btn-primary btn-block btn-md" style="height:35px; border-radius: 0 !important;">Register</button>
+                </form>
+                </section>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
