@@ -1,0 +1,12 @@
+F:\PRJ666\BestPrice\BestPrice\BestPrice\bin\Release\netcoreapp2.0\BestPrice.deps.json
+F:\PRJ666\BestPrice\BestPrice\BestPrice\bin\Release\netcoreapp2.0\BestPrice.runtimeconfig.json
+F:\PRJ666\BestPrice\BestPrice\BestPrice\bin\Release\netcoreapp2.0\BestPrice.runtimeconfig.dev.json
+F:\PRJ666\BestPrice\BestPrice\BestPrice\bin\Release\netcoreapp2.0\BestPrice.dll
+F:\PRJ666\BestPrice\BestPrice\BestPrice\bin\Release\netcoreapp2.0\BestPrice.pdb
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\BestPrice.csprojAssemblyReference.cache
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\BestPrice.csproj.CoreCompileInputs.cache
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\BestPrice.AssemblyInfoInputs.cache
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\BestPrice.AssemblyInfo.cs
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\BestPrice.dll
+F:\PRJ666\BestPrice\BestPrice\BestPrice\obj\Release\netcoreapp2.0\BestPrice.pdb

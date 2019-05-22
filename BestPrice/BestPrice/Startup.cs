@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BestPrice.Data;
 using BestPrice.Models;
 using BestPrice.Services;
+using Microsoft.AspNetCore.HttpOverrides;
 using MySql.Data.EntityFrameworkCore;
 
 
@@ -57,6 +58,12 @@ namespace BestPrice
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+            app.UseAuthentication();
             app.UseStaticFiles();
 
             app.UseAuthentication();
